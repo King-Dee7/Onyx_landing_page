@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Calculator as CalcIcon, DollarSign, Clock, Users, ArrowRight, ChevronDown, Calendar } from "lucide-react";
+import { DollarSign, Clock, ArrowRight, ChevronDown, Calendar } from "lucide-react";
 
 const currencies = [
     { code: "USD", symbol: "$" },
@@ -32,7 +32,7 @@ function LightSlider({
     max: number,
     step: number,
     unit: string,
-    icon: any,
+    icon: React.ElementType,
     onChange: (val: number) => void
 }) {
     const progress = ((value - min) / (max - min)) * 100;
@@ -125,7 +125,7 @@ export function Calculator() {
                             Estimate How Much Capacity <span className="text-theme-green">Admin Work Is Costing You</span>
                         </h2>
                         <p className="text-theme-body text-base md:text-lg leading-relaxed max-w-md">
-                            Most business owners don't realise how much time they lose to manual tasks.<br />
+                            Most business owners don&apos;t realise how much time they lose to manual tasks.<br />
                             This calculator estimates what that time could be worth — if it were spent on clients instead.
                         </p>
                     </div>
@@ -286,7 +286,7 @@ export function Calculator() {
                                 </div>
                                 <div className="flex-1">
                                     <span className="block text-theme-ink font-bold text-sm md:text-base leading-tight">Ready for growth?</span>
-                                    <span className="block text-[10px] md:text-xs text-zinc-500 mt-0.5">Let's build your blueprint.</span>
+                                    <span className="block text-[10px] md:text-xs text-zinc-500 mt-0.5">Let&apos;s build your blueprint.</span>
                                 </div>
                             </div>
                             <Link href="/connect" passHref>

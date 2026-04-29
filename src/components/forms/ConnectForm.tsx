@@ -118,9 +118,9 @@ export function ConnectForm() {
                     <div className="w-20 h-20 rounded-full bg-[#00BF63]/10 flex items-center justify-center mx-auto mb-8">
                         <Check className="w-10 h-10 text-[#00BF63]" />
                     </div>
-                    <h2 className="text-4xl font-bold text-zinc-900 mb-4 tracking-tight">You're In!</h2>
+                    <h2 className="text-4xl font-bold text-zinc-900 mb-4 tracking-tight">You&apos;re In!</h2>
                     <p className="text-zinc-500 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                        We've received your details. Expect a reply within 24 hours. Let's build something invisible.
+                        We&apos;ve received your details. Expect a reply within 24 hours. Let&apos;s build something invisible.
                     </p>
                     <button
                         onClick={() => window.location.href = "/"}
@@ -185,7 +185,7 @@ export function ConnectForm() {
                                 >
                                     <div className="mb-8">
                                         <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">
-                                            Let's <span className="text-[#00BF63]">Connect</span>
+                                            Let&apos;s <span className="text-[#00BF63]">Connect</span>
                                         </h2>
                                         <p className="text-zinc-500 mt-3 text-lg">Tell us about yourself and your business.</p>
                                     </div>

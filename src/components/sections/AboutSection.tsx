@@ -292,7 +292,7 @@ export function AboutSection() {
             </p>
 
             <p className="text-gray-600 text-[15px] leading-[1.75]">
-              Every system we build is custom-mapped to your business - not a template, not a plugin - a precision-engineered workflow that runs 24/7 so you don't have to.
+              Every system we build is custom-mapped to your business - not a template, not a plugin - a precision-engineered workflow that runs 24/7 so you don&apos;t have to.
             </p>
 
             {/* Stat strip */}
