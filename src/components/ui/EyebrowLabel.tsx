@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-interface EyebrowLabelProps extends React.HTMLAttributes<HTMLParagraphElement> {}
+type EyebrowLabelProps = React.HTMLAttributes<HTMLParagraphElement>;
 
 export function EyebrowLabel({ className, children, ...props }: EyebrowLabelProps) {
   return (

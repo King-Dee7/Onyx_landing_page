@@ -44,7 +44,7 @@ export function CookieBanner() {
             <div className="flex-1 pr-4">
               <h3 className="text-lg font-bold text-zinc-900 mb-2 tracking-tight">We value your privacy</h3>
               <p className="text-sm text-zinc-500 leading-relaxed max-w-2xl">
-                We use cookies to analyze site traffic and improve your experience. By clicking "Accept", you consent to our use of cookies. 
+                We use cookies to analyze site traffic and improve your experience. By clicking &quot;Accept&quot;, you consent to our use of cookies. 
                 Read our <Link href="#" className="text-zinc-900 underline underline-offset-2 hover:text-[#00BF63] transition-colors">Privacy Policy</Link> for more details.
               </p>
             </div>

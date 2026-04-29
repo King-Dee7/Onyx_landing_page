@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Wrench, Rocket } from "lucide-react";
+import { Search, Wrench } from "lucide-react";
 
 
 

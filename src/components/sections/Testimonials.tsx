@@ -23,7 +23,7 @@ export function Testimonials() {
           {content.testimonials.cards.map((card, i) => (
             <ScrollReveal key={i} delay={i * 0.15}>
               <div className="bg-theme-dark-surface border border-theme-border-dark rounded-[16px] p-8 h-full flex flex-col hover:border-theme-green/30 transition-colors">
-                <div className="text-theme-green text-5xl font-serif leading-none mb-4 opacity-50">"</div>
+                <div className="text-theme-green text-5xl font-serif leading-none mb-4 opacity-50">&quot;</div>
                 <p className="text-lg md:text-xl leading-[1.4] mb-8 flex-grow">
                   {card.quote}
                 </p>
