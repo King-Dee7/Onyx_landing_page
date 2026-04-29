@@ -30,7 +30,7 @@ export const content = {
       },
       {
         icon: "🧠",
-        title: "Mental Load",
+        title: "Relaxing Feels Like Falling Behind",
         description: "When you are the system, there’s no clocking out. One missed message costs you. Even when the day ends, your mind is still running the business."
       }
     ]
