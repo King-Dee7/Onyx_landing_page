@@ -1,5 +1,7 @@
 import { Variants } from "framer-motion";
 
+const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
@@ -7,7 +9,7 @@ export const fadeUp: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.16, 1, 0.3, 1]
+      ease: smoothEase
     }
   }
 };
@@ -30,7 +32,7 @@ export const heroHeadlineStagger: Variants = {
     transition: {
       staggerChildren: 0.08,
       duration: 0.6,
-      ease: [0.16, 1, 0.3, 1]
+      ease: smoothEase
     }
   }
 };
@@ -42,7 +44,7 @@ export const wordAnimation: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.16, 1, 0.3, 1]
+      ease: smoothEase
     }
   }
 };

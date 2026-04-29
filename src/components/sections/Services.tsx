@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 // ─── Abstract SVG Graphics ───────────────────────────────────────────────────
 
 const CXGraphic = () => (
@@ -213,7 +215,7 @@ function ServiceCard({
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.55, delay: index * 0.07, ease: smoothEase }}
       whileHover={{ y: -5, transition: { duration: 0.25, ease: "easeOut" } }}
       className="group relative overflow-hidden rounded-3xl p-6 md:p-8 flex flex-col justify-between min-h-[220px] cursor-pointer"
       style={{
@@ -287,7 +289,7 @@ export function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: smoothEase }}
           className="mb-12 md:mb-14"
         >
           <span className="text-theme-green text-[11px] font-bold tracking-[0.15em] uppercase block mb-4">

@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: smoothEase } }
 };
 
 export function FinalCTA() {
