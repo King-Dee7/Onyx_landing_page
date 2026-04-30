@@ -59,7 +59,7 @@ export function ProblemSection() {
           </ScrollReveal>
         </div>
 
-        <div className="flex md:grid md:grid-cols-3 gap-5 text-left overflow-x-auto no-scrollbar snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left">
           {content.problem.cards.map((card, i) => {
             const { eyebrow, Icon, Graphic } = cardData[i];
 
@@ -67,10 +67,10 @@ export function ProblemSection() {
               <ScrollReveal 
                 key={i} 
                 delay={i * 0.1} 
-                className="h-full flex-shrink-0 w-[85vw] md:w-full snap-center"
+                className="h-full w-full"
               >
                 <div
-                  className="group relative overflow-hidden rounded-3xl p-7 flex flex-col min-h-[340px] cursor-pointer transition-transform duration-300 hover:-translate-y-[5px]"
+                  className="group relative overflow-hidden rounded-3xl p-5 md:p-7 flex flex-col min-h-[260px] md:min-h-[340px] cursor-pointer transition-transform duration-300 hover:-translate-y-[5px]"
                   style={{
                     backgroundColor: "#ffffff",
                     boxShadow: "0 2px 16px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.05)",
@@ -89,11 +89,11 @@ export function ProblemSection() {
                   </div>
 
                   {/* Content starts at a fixed point for alignment */}
-                  <div className="relative z-10 pt-10">
-                    <h3 className="text-[22px] font-bold leading-[1.15] tracking-tight mb-2 text-theme-ink font-syne min-h-[52px]">
+                  <div className="relative z-10 pt-7 md:pt-10">
+                    <h3 className="text-[18px] md:text-[22px] font-bold leading-[1.15] tracking-tight mb-2 text-theme-ink font-syne min-h-[44px] md:min-h-[52px]">
                       {card.title}
                     </h3>
-                    <p className="text-[13.5px] leading-[1.55] mb-5 max-w-[90%] text-theme-body font-inter">
+                    <p className="text-[12.5px] md:text-[13.5px] leading-[1.55] mb-5 max-w-[90%] text-theme-body font-inter">
                       {card.description}
                     </p>
                   </div>

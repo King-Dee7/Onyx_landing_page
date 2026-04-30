@@ -118,7 +118,7 @@ const valueCards = [
 // ─── Founder Portrait Placeholder ─────────────────────────────────────────────
 
 const FounderPortrait = () => (
-  <div className="relative w-full h-full min-h-[480px] md:min-h-0 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group">
+  <div className="relative w-full min-h-[380px] sm:min-h-[440px] md:min-h-[560px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group">
     {/* Actual Founder Image */}
     <Image
       src="/Founder-Darius Asante.jpg"
@@ -269,7 +269,7 @@ export function AboutSection() {
         </div>
 
         {/* ── SECTION 3: Founder Spotlight ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Portrait */}
           <motion.div {...fadeUp(0)} className="h-full">
             <FounderPortrait />
@@ -294,24 +294,6 @@ export function AboutSection() {
             <p className="text-gray-600 text-[15px] leading-[1.75]">
               Every system we build is custom-mapped to your business - not a template, not a plugin - a precision-engineered workflow that runs 24/7 so you don&apos;t have to.
             </p>
-
-            {/* Stat strip */}
-            <div className="grid grid-cols-3 gap-4 pt-2">
-              {[
-                { stat: "40+", label: "Businesses Automated" },
-                { stat: "48hrs", label: "Saved Per Month Avg." },
-                { stat: "3×", label: "Faster Response Times" },
-              ].map((item) => (
-                <div key={item.stat} className="border-l-2 border-[#00BF63]/30 pl-4">
-                  <p className="text-2xl font-bold text-[#00BF63] tracking-tight">
-                    {item.stat}
-                  </p>
-                  <p className="text-[11px] text-gray-500 leading-[1.4] mt-0.5">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
 
             {/* CTA */}
             <div className="pt-1">

@@ -296,7 +296,8 @@ export function Services() {
             What We Build
           </span>
           <h2 className="text-3xl md:text-[52px] leading-[1.05] font-bold tracking-[-0.03em] text-theme-ink max-w-none md:whitespace-nowrap">
-            Built to run <span className="relative inline-block px-3 py-1">
+            <span className="font-normal">Built to run</span>{" "}
+            <span className="relative inline-block px-3 py-1">
               <span className="absolute inset-0 bg-[#00BF63] rounded-lg -rotate-2 transform scale-y-110" />
               <span className="relative z-10 text-white font-inter">without you.</span>
             </span>

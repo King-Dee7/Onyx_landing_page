@@ -182,54 +182,63 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md lg:hidden pt-28 px-6 pb-6 flex flex-col font-inter">
-          <nav className="flex flex-col space-y-6 text-xl font-bold mt-8 text-center text-gray-900">
-            <Link 
-              href="/" 
-              onClick={() => setMobileMenuOpen(false)}
-              className={cn(
-                "transition-colors",
-                isActive("/") ? "text-[#00BF63]" : "text-gray-600 hover:text-gray-900"
-              )}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className={cn(
-                "transition-colors",
-                isActive("/about") ? "text-[#00BF63]" : "text-gray-600 hover:text-gray-900"
-              )}
-            >
-              About
-            </Link>
-            <a
-              href="/#services"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Services
-            </a>
-            <a
-              href="/#solutions"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Solutions
-            </a>
-            <a
-              href="/#blueprint"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Blueprint
-            </a>
-          </nav>
-          <div className="mt-auto pb-8">
-            <Link href="/connect" onClick={() => setMobileMenuOpen(false)} className="block text-center w-full bg-[#0C0C0C] text-white px-5 py-4 rounded-2xl font-bold transition-colors hover:bg-[#00BF63]">
-              Contact Us
-            </Link>
+        <div className="fixed inset-0 z-40 lg:hidden font-inter">
+          <button
+            type="button"
+            aria-label="Close mobile menu"
+            className="absolute inset-0 bg-black/10 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          <div
+            className={cn(
+              "absolute left-0 right-0 border-t border-gray-100 bg-white/95 backdrop-blur-md shadow-2xl overflow-hidden",
+              announcementVisible ? "top-[120px]" : "top-20"
+            )}
+          >
+            <div className="max-h-[70vh] overflow-y-auto px-6 py-8">
+              <nav className="flex flex-col gap-6 text-[15px] font-medium tracking-[0.18em] uppercase text-center text-gray-900">
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    "py-1 transition-colors",
+                    isActive("/") ? "text-[#00BF63]" : "text-gray-600 hover:text-gray-900"
+                  )}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    "py-1 transition-colors",
+                    isActive("/about") ? "text-[#00BF63]" : "text-gray-600 hover:text-gray-900"
+                  )}
+                >
+                  About
+                </Link>
+                <a href="/#services" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
+                  Services
+                </a>
+                <a href="/#solutions" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
+                  Solutions
+                </a>
+                <a href="/#blueprint" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
+                  Blueprint
+                </a>
+              </nav>
+
+              <div className="pt-6">
+                <Link
+                  href="/connect"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-center w-full bg-[#0C0C0C] text-white px-5 py-3 rounded-none font-semibold tracking-wide transition-colors hover:bg-[#00BF63]"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
