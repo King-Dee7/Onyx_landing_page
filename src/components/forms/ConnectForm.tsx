@@ -120,7 +120,7 @@ export function ConnectForm() {
                     </div>
                     <h2 className="text-4xl font-bold text-zinc-900 mb-4 tracking-tight">You&apos;re In!</h2>
                     <p className="text-zinc-500 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                        We&apos;ve received your details. Expect a reply within 24 hours. Let&apos;s build something invisible.
+                        We&apos;ve received your details. Expect an email from us shortly with your next steps. Please check your inbox (and your spam/promotions folder just in case). Let&apos;s build something incredible.
                     </p>
                     <button
                         onClick={() => window.location.href = "/"}

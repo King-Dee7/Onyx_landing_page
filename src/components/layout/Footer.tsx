@@ -118,6 +118,7 @@ export function Footer() {
                 <FooterLink href="/#calculator">Calculator</FooterLink>
                 <FooterLink href="/#process">How It Works</FooterLink>
                 <FooterLink href="/#reviews">Reviews</FooterLink>
+                <FooterLink href="/privacy">Privacy Policy</FooterLink>
               </div>
             </div>
           </div>

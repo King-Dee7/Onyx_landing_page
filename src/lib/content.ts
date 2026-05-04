@@ -149,7 +149,7 @@ export const content = {
     ]
   },
   finalCta: {
-    headline: "Ready to get your time back?",
+    headline: "Still Doing It All Manually?",
     subheadline: "Book a free 30-minute strategy call. No pitch. Just a clear picture of what automation can do for your business.",
     button: "→ Book My Free Call",
     trust: "No commitment · Response within 24 hours · Built for service businesses"

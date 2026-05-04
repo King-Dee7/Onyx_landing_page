@@ -145,7 +145,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link href="/connect" className={cn("px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:bg-[#00BF63] hover:text-white hover:shadow-lg active:scale-95", isDark ? "bg-white text-black" : "bg-[#0C0C0C] text-white")}>
-              Contact Us
+              Get Started
             </Link>
           </div>
 
@@ -235,7 +235,7 @@ export function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="block text-center w-full bg-[#0C0C0C] text-white px-5 py-3 rounded-none font-semibold tracking-wide transition-colors hover:bg-[#00BF63]"
                 >
-                  Contact Us
+                  Get Started
                 </Link>
               </div>
             </div>
