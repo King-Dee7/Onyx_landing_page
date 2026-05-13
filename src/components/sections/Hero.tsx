@@ -84,16 +84,16 @@ export function Hero() {
 
   return (
     <>
-      <div className="w-full relative overflow-hidden">
+      <div className="w-full min-h-[100dvh] relative overflow-hidden flex flex-col">
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div id="bgA" className="bg-layer is-visible"></div>
           <div id="bgB" className="bg-layer"></div>
           <div id="bgOverlay" className="bg-overlay"></div>
         </div>
 
-        <div className="relative z-10">
-          <section className="pt-32 md:pt-56 pb-24 md:pb-36">
-            <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center relative">
+        <div className="relative z-10 flex flex-1 flex-col">
+          <section className="flex-1 flex items-center pt-32 md:pt-56 pb-20 md:pb-36">
+            <div className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center text-center relative">
               <h1 className="text-3xl md:text-[4.25rem] font-bold leading-[1.2] md:leading-[1.1] tracking-tight mb-6 relative">
                 <span className="block text-[#00BF63]">
                   Automate Your Growth with AI
@@ -134,13 +134,13 @@ export function Hero() {
             </div>
           </section>
 
-          <div className="relative z-10 h-16 md:h-24">
-            <div className="absolute bottom-0 left-1/2 h-[120px] md:h-[180px] w-[200%] md:w-[160%] -translate-x-1/2 rounded-t-[100%] bg-theme-off-white"></div>
+          <div className="relative z-10 h-0 lg:h-24 shrink-0">
+            <div className="hidden lg:block absolute bottom-0 left-1/2 h-[180px] w-[160%] -translate-x-1/2 rounded-t-[100%] bg-theme-off-white"></div>
           </div>
         </div>
       </div>
 
-      <section className="bg-theme-off-white text-gray-900 pt-10 md:pt-10 pb-12 md:pb-16 px-6 relative z-30 -mt-16 md:-mt-24">
+      <section className="bg-theme-off-white text-gray-900 pt-10 md:pt-10 pb-12 md:pb-16 px-6 relative z-30 mt-0 lg:-mt-24">
         <div className="max-w-6xl mx-auto w-full relative z-10 mb-14">
           <ScrollReveal width="100%">
             <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-black/10">

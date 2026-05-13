@@ -129,12 +129,6 @@ export function Navbar() {
               Services
             </a>
             <a
-              href="/#solutions"
-              className={cn("text-[15px] font-semibold transition-colors duration-200", isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-gray-900")}
-            >
-              Solutions
-            </a>
-            <a
               href="/#blueprint"
               className={cn("text-[15px] font-semibold transition-colors duration-200", isDark ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-gray-900")}
             >
@@ -220,9 +214,6 @@ export function Navbar() {
                 </Link>
                 <a href="/#services" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
                   Services
-                </a>
-                <a href="/#solutions" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
-                  Solutions
                 </a>
                 <a href="/#blueprint" onClick={() => setMobileMenuOpen(false)} className="py-1 text-gray-600 hover:text-gray-900">
                   Blueprint

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://onyxautomation.co'; // Replace when actual domain is set
+  const baseUrl = 'https://www.onyxautomationhub.com';
 
   return [
     {

@@ -58,7 +58,7 @@ export function FinalCTA() {
                 size="lg" 
                 className="w-full sm:w-auto tracking-wide shadow-2xl shadow-theme-green/10 font-bold transition-transform hover:-translate-y-1"
               >
-                {content.finalCta.button}
+                Book My Free Call
               </Button>
             </Link>
           </motion.div>

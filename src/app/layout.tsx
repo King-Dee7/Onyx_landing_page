@@ -16,12 +16,18 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.onyxautomationhub.com"),
+  icons: {
+    icon: "/onyx.svg",
+    shortcut: "/onyx.svg",
+    apple: "/onyx.svg",
+  },
   title: "Onyx Automation Agency | Your Business. Running Itself.",
   description: "We build the AI systems that handle your inbox, bookings, and admin.",
   openGraph: {
     title: "Onyx Automation Agency",
     description: "AI systems for service businesses that want to scale without the overhead.",
-    url: "https://onyxautomation.co", // Replace with your actual domain when ready
+    url: "https://www.onyxautomationhub.com",
     siteName: "Onyx Automation",
     images: [
       {
