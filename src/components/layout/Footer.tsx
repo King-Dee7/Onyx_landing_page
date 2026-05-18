@@ -105,7 +105,7 @@ export function Footer() {
           <div className="md:col-span-7 lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-6">
             <div>
               <ColHeader>Contact</ColHeader>
-              <FooterLink href="mailto:hello@onyxautomation.co">Email</FooterLink>
+              <FooterLink href="mailto:team@onyxautomationhub.com">Email</FooterLink>
               <FooterLink href="http://wa.me/message/TNGRXPEF5XIYG1">WhatsApp</FooterLink>
             </div>
 
@@ -136,7 +136,7 @@ export function Footer() {
             <SocialButton href="https://web.facebook.com/profile.php?id=61587054920765" label="Facebook">
               <IconFacebook />
             </SocialButton>
-            <SocialButton href="mailto:hello@onyxautomation.co" label="Email">
+            <SocialButton href="mailto:team@onyxautomationhub.com" label="Email">
               <IconMail />
             </SocialButton>
             <SocialButton href="http://wa.me/message/TNGRXPEF5XIYG1" label="WhatsApp">

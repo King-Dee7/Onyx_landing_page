@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -211,70 +212,72 @@ function ServiceCard({
   const { Graphic, Icon } = service;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay: index * 0.07, ease: smoothEase }}
-      whileHover={{ y: -5, transition: { duration: 0.25, ease: "easeOut" } }}
-      className="group relative overflow-hidden rounded-3xl p-6 md:p-8 flex flex-col justify-between min-h-[220px] cursor-pointer"
-      style={{
-        backgroundColor: service.bg,
-        boxShadow: service.isHero
-          ? "0 8px 40px rgba(0, 191, 99, 0.25)"
-          : service.isCTA
-            ? "0 8px 40px rgba(0,0,0,0.3)"
-            : "0 2px 16px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.05)",
-      }}
-    >
-      {/* Top row: eyebrow + icon */}
-      <div className="flex items-start justify-between">
-        <p className={`text-[10px] md:text-[11px] font-semibold tracking-[0.12em] uppercase ${service.eyebrowColor}`}>
-          {service.eyebrow}
-        </p>
-        <span className={`${service.iconColor} mt-0.5`}>
-          <Icon />
-        </span>
-      </div>
+    <Link href="/connect" className="block h-full" aria-label={`${service.name} inquiry form`}>
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.55, delay: index * 0.07, ease: smoothEase }}
+        whileHover={{ y: -5, transition: { duration: 0.25, ease: "easeOut" } }}
+        className="group relative overflow-hidden rounded-3xl p-6 md:p-8 flex flex-col justify-between min-h-[220px] cursor-pointer h-full"
+        style={{
+          backgroundColor: service.bg,
+          boxShadow: service.isHero
+            ? "0 8px 40px rgba(0, 191, 99, 0.25)"
+            : service.isCTA
+              ? "0 8px 40px rgba(0,0,0,0.3)"
+              : "0 2px 16px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.05)",
+        }}
+      >
+        {/* Top row: eyebrow + icon */}
+        <div className="flex items-start justify-between">
+          <p className={`text-[10px] md:text-[11px] font-semibold tracking-[0.12em] uppercase ${service.eyebrowColor}`}>
+            {service.eyebrow}
+          </p>
+          <span className={`${service.iconColor} mt-0.5`}>
+            <Icon />
+          </span>
+        </div>
 
-      {/* Bottom content: title, description, arrow */}
-      <div>
-        <h3
-          className={`text-[20px] md:text-[22px] font-bold leading-[1.15] tracking-tight mb-2 ${service.textColor} font-syne`}
-        >
-          {service.name}
-        </h3>
-        <p
-          className={`text-[13px] md:text-[13.5px] leading-[1.55] mb-5 max-w-[85%] ${service.isHero
-              ? "text-white/75"
-              : service.isCTA
-                ? "text-white/50"
-                : "text-theme-body"
-            }`}
-        >
-          {service.description}
-        </p>
+        {/* Bottom content: title, description, arrow */}
+        <div>
+          <h3
+            className={`text-[20px] md:text-[22px] font-bold leading-[1.15] tracking-tight mb-2 ${service.textColor} font-syne`}
+          >
+            {service.name}
+          </h3>
+          <p
+            className={`text-[13px] md:text-[13.5px] leading-[1.55] mb-5 max-w-[85%] ${service.isHero
+                ? "text-white/75"
+                : service.isCTA
+                  ? "text-white/50"
+                  : "text-theme-body"
+              }`}
+          >
+            {service.description}
+          </p>
 
-        {/* Arrow */}
-        <span
-          className={`inline-flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300
-            ${service.isHero
-              ? "border-white/40 text-white group-hover:bg-white group-hover:text-theme-green"
-              : service.isCTA
-                ? "border-theme-green/50 text-theme-green group-hover:bg-theme-green group-hover:text-white"
-                : "border-black/10 text-theme-ink group-hover:bg-theme-ink group-hover:text-white"
-            }
-          `}
-        >
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="3" y1="8" x2="13" y2="8" /><polyline points="9 4 13 8 9 12" />
-          </svg>
-        </span>
-      </div>
+          {/* Arrow */}
+          <span
+            className={`inline-flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300
+              ${service.isHero
+                ? "border-white/40 text-white group-hover:bg-white group-hover:text-theme-green"
+                : service.isCTA
+                  ? "border-theme-green/50 text-theme-green group-hover:bg-theme-green group-hover:text-white"
+                  : "border-black/10 text-theme-ink group-hover:bg-theme-ink group-hover:text-white"
+              }
+            `}
+          >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="8" x2="13" y2="8" /><polyline points="9 4 13 8 9 12" />
+            </svg>
+          </span>
+        </div>
 
-      {/* Abstract background graphic */}
-      <Graphic />
-    </motion.div>
+        {/* Abstract background graphic */}
+        <Graphic />
+      </motion.div>
+    </Link>
   );
 }
 
